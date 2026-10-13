@@ -1,7 +1,100 @@
-/* ITCS333 A2 starter — implement the design spec from index.html here.
-   See README rubric for the graded checks. Do not use inline styles. */
+body{
+   font-family: Arial, sans-serif;
+   background-color: #f6fafd;
+   color: #0a1931;
+}
 
-/* TODO: style #site-header (padding, border-bottom) */
-/* TODO: style .card (padding, border, gap) and .card-grid (display, gap, 3 columns) */
-/* TODO: style form inputs (padding) and a :focus state */
-/* TODO: add a @media (max-width: 700px) query collapsing .card-grid to one column */
+
+#site-header {
+   padding:16px;
+   background-color: #0a1931;
+   color: #FFFFFF;
+   border-bottom:8px solid #4a7fa7;
+   text-align: center;
+}
+
+#site-header nav a {
+   display: inline-block;
+   padding: 8px 25px;
+   margin-left: 50px;
+   margin-right: 50px;
+   border: 1px solid #B3CFE5;
+   border-radius: 4px;
+   color: #ffffff;
+}
+
+
+.schedule-table {
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 30px;
+   border-collapse: collapse;
+   background-color: #ffffff;
+   border-radius: 8px;
+   overflow: hidden;
+}
+
+.schedule-table th, 
+.schedule-table td {
+   padding:12px;
+   border: 1px solid #b3cfe5;
+   text-align: center;
+}
+
+.schedule-table th {
+   background-color: #1a3d63;
+   color: #ffffff;
+   font-weight: bold;
+}
+
+.card {
+   padding:12px;
+   border:1px solid #4a7fa7;
+   border-radius: 8px;
+   text-align: center;
+}
+
+.card-grid {
+   display: grid;
+   gap:16px; 
+   grid-template-columns: repeat(3, 1fr);
+   margin-bottom: 30px;
+}
+
+form label {
+   display: block;
+   margin-bottom: 6px;
+   font-weight: bold;
+   color: #0a1931;
+}
+
+input[type="text"], input[type="email"] {
+   padding: 8px;
+   width: 50%;
+   border: 1px solid #4a7fa7;
+   border-radius: 4px;
+   margin-bottom: 15px;
+   display: block;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+  border-color: #1a3d63;
+  outline: 2px solid rgba(26, 61, 99, 0.3);
+}
+
+button[type="submit"] {
+   background-color: #1a3d63;
+   color: #ffffff;
+   padding: 10px 22px;
+   border-radius: 6px;
+   font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+   
